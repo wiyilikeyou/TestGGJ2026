@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: NewKoreography
   m_EditorClassIdentifier: 
-  mSourceClip: {fileID: 8300000, guid: 07c875c9d85a36f48bd4f5212c8e6074, type: 3}
+  mSourceClip: {fileID: 8300000, guid: 502608c992c5d2b498af0d23e3c72945, type: 3}
   mAudioFilePath: 
   mSampleRate: 48000
   mIgnoreLatencyOffset: 0
@@ -51,3 +51,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bcf6d339ca993d4ab39d65e0b8aff6b, type: 2}
   - {fileID: 11400000, guid: c2f9117a0f7c4cc41b88bc140bf9797d, type: 2}
   - {fileID: 11400000, guid: 57e3d04dd680b6446b9a6f420d3bb3e2, type: 2}
+  - {fileID: 11400000, guid: f523c8d2e03e9c449bfeb08538359d0f, type: 2}
