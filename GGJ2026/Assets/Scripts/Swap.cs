@@ -12,7 +12,6 @@ public class Swap : MonoBehaviour
     private Transform childWorldTransform;
     private Vector3 childWorldPosition;
     private Vector3 childWorldScale;
-    private int layerCount = -1;
 
     private void Start()
     {
@@ -46,6 +45,13 @@ public class Swap : MonoBehaviour
 
     IEnumerator ExpandCoroutine()
     {
+        Canvas canvas = GetComponent<Canvas>();
+        if (canvas != null)
+        {
+            canvas.sortingOrder = Settings.Instance.layerCount; // 设置为最低层级
+            Settings.Instance.layerCount++;
+        }
+        
         Vector3 targetScale = new Vector3(4,4,4);
         float elapsedTime = 0f;
         float duration = 2f; // 持续时间2秒
@@ -65,12 +71,6 @@ public class Swap : MonoBehaviour
                 childWorldScale.z / parentScale.z
             );
             yield return null; // 等待下一帧
-        }
-        Canvas canvas = GetComponent<Canvas>();
-        if (canvas != null)
-        {
-            canvas.sortingOrder = layerCount; // 设置为最低层级
-            layerCount--;
         }
     }
 }

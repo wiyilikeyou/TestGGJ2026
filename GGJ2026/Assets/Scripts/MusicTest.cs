@@ -38,27 +38,27 @@ public class MusicTest : MonoBehaviour
     private void OnTrackEvent(KoreographyEvent koreoEvent)
     {
     
-        if (player != null)
-        {
-            // 获取 Player 的位置
-            Vector3 spawnPosition = player.transform.position;
-        
-            // 设置 x 坐标为 -3.5 到 3.5 之间的随机值
-            spawnPosition.x = Random.Range(-3.5f, 3.5f);
-        
-            // 在指定位置生成 EnemyPrefab
-            GameObject enemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
-            
-            enemy.transform.SetParent(road.transform);
-        }
-        else
-        {
-            Debug.LogWarning("Player object with tag 'Player' not found.");
-        }
-
-        // 更新 beatCount 显示
-        beatCount.text = beat.ToString();
-        beat++;
+        // if (player != null)
+        // {
+        //     // 获取 Player 的位置
+        //     Vector3 spawnPosition = player.transform.position;
+        //
+        //     // 设置 x 坐标为 -3.5 到 3.5 之间的随机值
+        //     spawnPosition.x = Random.Range(-3.5f, 3.5f);
+        //
+        //     // 在指定位置生成 EnemyPrefab
+        //     GameObject enemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
+        //     
+        //     enemy.transform.SetParent(road.transform);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Player object with tag 'Player' not found.");
+        // }
+        //
+        // // 更新 beatCount 显示
+        // beatCount.text = beat.ToString();
+        // beat++;
     }
 
     public IEnumerator DelayPlay(float delay)
