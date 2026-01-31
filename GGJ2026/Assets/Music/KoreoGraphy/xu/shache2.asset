@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: shache2
+  m_EditorClassIdentifier: 
+  mEventID: shache2
+  mEventList:
+  - mStartSample: 3697344
+    mEndSample: 3697344
+  - mStartSample: 3742272
+    mEndSample: 3742272
+  - mStartSample: 3762432
+    mEndSample: 3762432
+  - mStartSample: 3857472
+    mEndSample: 3857472
+  - mStartSample: 3900096
+    mEndSample: 3900096
+  - mStartSample: 3960000
+    mEndSample: 3960000
+  - mStartSample: 4045824
+    mEndSample: 4045824
+  - mStartSample: 4124160
+    mEndSample: 4124160
+  - mStartSample: 4157568
+    mEndSample: 4157568
+  - mStartSample: 4193280
+    mEndSample: 4193280
+  - mStartSample: 4221504
+    mEndSample: 4221504
+  - mStartSample: 4244544
+    mEndSample: 4244544
+  - mStartSample: 4318848
+    mEndSample: 4318848
+  - mStartSample: 4357440
+    mEndSample: 4357440
+  - mStartSample: 4444416
+    mEndSample: 4444416
+  - mStartSample: 4521600
+    mEndSample: 4521600
+  - mStartSample: 4539456
+    mEndSample: 4539456
+  - mStartSample: 4557312
+    mEndSample: 4557312
+  - mStartSample: 4593600
+    mEndSample: 4593600
+  - mStartSample: 4629312
+    mEndSample: 4629312
+  - mStartSample: 4704768
+    mEndSample: 4704768
+  - mStartSample: 4754880
+    mEndSample: 4754880
+  - mStartSample: 4888512
+    mEndSample: 4888512
+  - mStartSample: 4939776
+    mEndSample: 4939776
+  - mStartSample: 4991040
+    mEndSample: 4991040
+  - mStartSample: 5026752
+    mEndSample: 5026752
+  - mStartSample: 5038272
+    mEndSample: 5038272
+  - mStartSample: 5087232
+    mEndSample: 5087232
+  - mStartSample: 5226624
+    mEndSample: 5226624
+  - mStartSample: 5236992
+    mEndSample: 5236992
+  - mStartSample: 5288256
+    mEndSample: 5288256
+  - mStartSample: 5461056
+    mEndSample: 5461056
+  _SerializedPayloadTypes: []
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 
