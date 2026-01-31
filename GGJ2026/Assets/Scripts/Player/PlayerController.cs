@@ -1,22 +1,27 @@
+using System.Threading;
+using Ib_Core;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+public class ShowTestUIInfo : Ib_Event<ShowTestUIInfo,string>{}
 public class PlayerController : MonoBehaviour
 {
-    private PlayerInput playerInput;
+    private PlayerMoveInput playerInput;
     private Rigidbody rb;
     private Vector2 moveDirection;
 
     [Header("设置")]
     [SerializeField] private float moveSpeed = 50f;
     
+    [BoxGroup] [SerializeField] private float interactRadius = 5f;
+    [BoxGroup] [SerializeField] private LayerMask interactLayer;
     private void Awake()
     {
-        playerInput = new PlayerInput();
+        playerInput = new PlayerMoveInput();
         TryGetComponent(out rb);
         
-        // 确保父物体物理旋转是锁定的
         if(rb != null) rb.constraints = RigidbodyConstraints.FreezeRotation;
+        playerInput.Player.Interact.performed += OnInteract;
     }
 
     private void OnEnable() => playerInput.Enable();
@@ -37,5 +42,21 @@ public class PlayerController : MonoBehaviour
         if (rb == null) return;
         Vector3 forceDir = new Vector3(moveDirection.x, 0, moveDirection.y);
         rb.AddForce(forceDir * moveSpeed, ForceMode.Force);
+    }
+    private Collider[] buffer = new Collider[10];
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        var cnt = Physics.OverlapSphereNonAlloc(transform.position, interactRadius, buffer,interactLayer);
+        for (int i = 0; i < cnt; i++)
+        {
+            var col = buffer[i];
+            if (col.TryGetComponent(out UFOController ufoController))
+            {
+                if(ufoController.IsActive)
+                    ShowTestUIInfo.Invoke("Bingo!");
+                else 
+                    ShowTestUIInfo.Invoke("No!");
+            }
+        }
     }
 }
