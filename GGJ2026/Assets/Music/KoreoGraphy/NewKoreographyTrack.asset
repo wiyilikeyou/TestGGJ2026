@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: NewKoreographyTrack
+  m_EditorClassIdentifier: 
+  mEventID: NewKoreographyTrack
+  mEventList:
+  - mStartSample: 30000
+    mEndSample: 30000
+  - mStartSample: 50000
+    mEndSample: 50000
+  - mStartSample: 70000
+    mEndSample: 70000
+  - mStartSample: 110000
+    mEndSample: 110000
+  - mStartSample: 150000
+    mEndSample: 150000
+  - mStartSample: 190000
+    mEndSample: 190000
+  - mStartSample: 230000
+    mEndSample: 230000
+  - mStartSample: 270000
+    mEndSample: 270000
+  - mStartSample: 310000
+    mEndSample: 310000
+  - mStartSample: 340000
+    mEndSample: 340000
+  - mStartSample: 380000
+    mEndSample: 380000
+  - mStartSample: 420000
+    mEndSample: 420000
+  - mStartSample: 460000
+    mEndSample: 460000
+  - mStartSample: 500000
+    mEndSample: 500000
+  - mStartSample: 540000
+    mEndSample: 540000
+  - mStartSample: 570000
+    mEndSample: 570000
+  - mStartSample: 610000
+    mEndSample: 610000
+  - mStartSample: 650000
+    mEndSample: 650000
+  - mStartSample: 670000
+    mEndSample: 670000
+  - mStartSample: 690000
+    mEndSample: 690000
+  _SerializedPayloadTypes: []
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 
