@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             var col = buffer[i];
             if (col.TryGetComponent(out UFOController ufoController))
             {
-                if(ufoController.IsActive)
+                if(ufoController.Interact())
                     ShowTestUIInfo.Invoke("Bingo!");
                 else 
                     ShowTestUIInfo.Invoke("No!");

@@ -15,7 +15,12 @@ public class UFOController : MonoBehaviour
 
     [SerializeField] private float fadeDuration = 2f;
     [SerializeField] private float activeDuration = 1f;
+
+    [SerializeField] private Transform alianSummonPos;
+    [SerializeField] private int alianSummonCnt = 3;
+    [SerializeField] private float alianSummonRadius = 2f;
     private bool isActive = false;
+    private bool isInteracted = false;
     private float activeTime = -1f;
     public bool IsActive => isActive;
     private bool changedColor = false;
@@ -56,6 +61,7 @@ public class UFOController : MonoBehaviour
             {
                 isActive = true; 
                 activeTime= Time.time;
+                SummonAlian();
             });
     }
     
@@ -74,9 +80,16 @@ public class UFOController : MonoBehaviour
                 Destroy(gameObject,2);
             });
     }
-
     private void SummonAlian()
     {
-        
+        AlianCreator.Instance?.SummonAlian(EAlianSummonType.Test,3,alianSummonPos.position,Quaternion.identity,alianSummonRadius,alianSummonPos);
+    }
+
+    public bool Interact()
+    {
+        if(!isActive || isInteracted)return false;
+        isInteracted = true;
+        RestoreColor();
+        return true;
     }
 }
