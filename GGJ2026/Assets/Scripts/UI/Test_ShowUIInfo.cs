@@ -26,6 +26,6 @@ public class Test_ShowUIInfo : MonoBehaviour
       tween?.Kill();
       textMeshProUGUI.color = new Color(textMeshProUGUI.color.r, textMeshProUGUI.color.g,textMeshProUGUI.color.b,0);
       textMeshProUGUI.text = info;
-      tween = textMeshProUGUI.DOFade(1f, 0.66f);
+      tween = textMeshProUGUI.DOFade(1f, 0.66f).OnComplete(()=>textMeshProUGUI.DOFade(1f, 2f).OnComplete(() => textMeshProUGUI.text = ""));
    }
 }
