@@ -13,12 +13,14 @@ public enum EUFOType
     NormalUFO = 0,
     EnemyUFO = 1,
     LaserUFO = 2,
+    LaserCircle = 3,
 }
 public class UFOCreator : Singleton<UFOCreator>
 {
     [SerializeField] private GameObject ufoPrefab;
     [SerializeField] private GameObject ememyUFOPrefab;
     [SerializeField] private GameObject laserUFOPrefab;
+    [SerializeField] private GameObject laserCircleUFOPrefab;
     private Dir summonDir;
     
     public UFOBox SummonUFO(EUFOType ufoType,Dir dir,Vector3 pos)
@@ -44,7 +46,11 @@ public class UFOCreator : Singleton<UFOCreator>
                 break;
             case EUFOType.LaserUFO:
                 box.obj = Instantiate(laserUFOPrefab, pos , Quaternion.identity);
-                box.obj.transform.position = FindObjectOfType<PlayerController>()?.transform.position??Vector3.zero;
+                box.obj.transform.position = (FindObjectOfType<PlayerController>()?.transform.position??Vector3.zero) + MathUtils.GetRandomPosOffset(1.5f);
+                break;
+            case EUFOType.LaserCircle:
+                box.obj = Instantiate(laserCircleUFOPrefab, pos , Quaternion.identity);
+                box.obj.transform.position = (FindObjectOfType<PlayerController>()?.transform.position??Vector3.zero) + MathUtils.GetRandomPosOffset(2.5f);
                 break;
             default:
                 box.obj = Instantiate(ufoPrefab, pos, Quaternion.identity);

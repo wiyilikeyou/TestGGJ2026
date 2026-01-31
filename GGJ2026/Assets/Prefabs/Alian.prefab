@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556299255042833
 Transform:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556299275603759
 Transform:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556299331712608
 Transform:
   m_ObjectHideFlags: 0
@@ -266,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556299558560019
 Transform:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556299882427774
 Transform:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556300271510059
 Transform:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556300363233580
 Transform:
   m_ObjectHideFlags: 0
@@ -618,6 +618,7 @@ Transform:
   - {fileID: 3230556299255042833}
   - {fileID: 3230556299882427774}
   - {fileID: 3230556301064940536}
+  - {fileID: 1565915893823586413}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -638,7 +639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556300958322003
 Transform:
   m_ObjectHideFlags: 0
@@ -721,7 +722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3230556301064940536
 Transform:
   m_ObjectHideFlags: 0
@@ -787,3 +788,110 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &5140992513134718750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3230556300513368583}
+    m_Modifications:
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.03579717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9993591
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 175.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460670857627334089, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_Name
+      value: waixinren_dauidongzuo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130299518965460801, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa248e0f12b2fd84eb89a9b9d7bafc12, type: 3}
+--- !u!4 &1565915893823586413 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5972680506538995571, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+    type: 3}
+  m_PrefabInstance: {fileID: 5140992513134718750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2229440806342499031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6460670857627334089, guid: fa248e0f12b2fd84eb89a9b9d7bafc12,
+    type: 3}
+  m_PrefabInstance: {fileID: 5140992513134718750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4850117912052023867
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229440806342499031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56349f31302de6945961eb726a3626d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

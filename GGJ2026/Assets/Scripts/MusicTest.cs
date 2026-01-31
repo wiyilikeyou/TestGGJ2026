@@ -79,7 +79,7 @@ public class MusicTest : MonoBehaviour
             spawnPosition.z = player.transform.position.z + 30f;
         
             // 在指定位置生成 EnemyPrefab
-            UFOCreator.Instance?.SummonUFO((EUFOType)UnityEngine.Random.Range(1,3), Dir.Forward, summonPos.position + Vector3.right * Random.Range(-2f, 2f) + Vector3.up * 5.75f);
+            UFOCreator.Instance?.SummonUFO((EUFOType)UnityEngine.Random.Range(1,4), Dir.Forward, summonPos.position + Vector3.right * Random.Range(-2f, 2f) + Vector3.up * 5.75f);
         }
         else
         {

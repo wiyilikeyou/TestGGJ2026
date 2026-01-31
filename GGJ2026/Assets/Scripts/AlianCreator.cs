@@ -12,7 +12,7 @@ public class AlianCreator : Singleton<AlianCreator>
 {
     [BoxGroup("外星人")] [SerializeField] private GameObject testAlianPrefab;
 
-    public void SummonAlian(EAlianSummonType alianSummonType,int cnt,Vector3 position,Quaternion rotation,float maxRadius,Transform parent)
+    public GameObject SummonAlian(EAlianSummonType alianSummonType,int cnt,Vector3 position,Quaternion rotation,float maxRadius,Transform parent)
     {
         switch (alianSummonType)
         {
@@ -21,10 +21,11 @@ public class AlianCreator : Singleton<AlianCreator>
                 for (int i = 0; i < cnt; i++)
                 {
                     var targetPos = position + MathUtils.GetRandomPosOffset(maxRadius);
-                    Instantiate(testAlianPrefab, targetPos, rotation,parent);
+                    return Instantiate(testAlianPrefab, targetPos, rotation,parent);
                 }
                 break;
         }
+        return null;
     }
 }
 public class MathUtils : MonoBehaviour
