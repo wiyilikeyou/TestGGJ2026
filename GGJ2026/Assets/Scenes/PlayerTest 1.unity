@@ -197,6 +197,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 123573732, guid: 88d02cc4745a13d40885daf545eb3640, type: 3}
+      propertyPath: beatCount
+      value: 
+      objectReference: {fileID: 793376672}
+    - target: {fileID: 123573732, guid: 88d02cc4745a13d40885daf545eb3640, type: 3}
+      propertyPath: summonPos
+      value: 
+      objectReference: {fileID: 128889409}
+    - target: {fileID: 123573732, guid: 88d02cc4745a13d40885daf545eb3640, type: 3}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 197566609}
     - target: {fileID: 7656562569441051284, guid: 88d02cc4745a13d40885daf545eb3640,
         type: 3}
       propertyPath: m_RootOrder
@@ -259,34 +271,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88d02cc4745a13d40885daf545eb3640, type: 3}
---- !u!1 &123573731 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7656562569441051285, guid: 88d02cc4745a13d40885daf545eb3640,
-    type: 3}
-  m_PrefabInstance: {fileID: 123573730}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &123573732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123573731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0bfb52010c1ac640840d14b36890284, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackName: NewKoreographyTrack
-  trackName1: NewKoreographyTrack2
-  beatCount: {fileID: 793376672}
-  EnemyPrefab: {fileID: 8835542764578687725, guid: 12edf7bf7e10e1545bd2e533480f3e38,
-    type: 3}
-  EnemyPrefab2: {fileID: 442972973897044233, guid: f068be3755d94ab46b210c79d3720d45,
-    type: 3}
-  musicPlayer: {fileID: 197566609}
-  road: {fileID: 0}
-  summonPos: {fileID: 128889409}
 --- !u!1 &128889408
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlayOnAwake: 0
-  koreography: {fileID: 11400000, guid: 70f6de1ab19dc7d429ed6fe4fe408d32, type: 2}
+  koreography: {fileID: 11400000, guid: cc5b138847989f04c98078954db0ef13, type: 2}
   targetKoreographer: {fileID: 0}
 --- !u!82 &197566610
 AudioSource:
