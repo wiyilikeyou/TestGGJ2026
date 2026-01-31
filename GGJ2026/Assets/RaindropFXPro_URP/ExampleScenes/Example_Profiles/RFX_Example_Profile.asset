@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: RFX_Example_Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 2682275993418739160}
+  - {fileID: 9009573091818496265}
+--- !u!114 &2682275993418739160
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6e1e26e67e084439ccd405f01baf98, type: 3}
+  m_Name: RaindropFX_URP
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  fadeout_fadein_switch:
+    m_OverrideState: 1
+    m_Value: 0
+  fastMode:
+    m_OverrideState: 1
+    m_Value: 1
+  fadeSpeed:
+    m_OverrideState: 1
+    m_Value: 0.02
+  refreshRate:
+    m_OverrideState: 1
+    m_Value: 1
+  _raindropTex_alpha:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 551b620c4f5d91a4a870f3cbc372ed08, type: 3}
+  forceRainTextureSize:
+    m_OverrideState: 1
+    m_Value: 0
+  calcRainTextureSize:
+    m_OverrideState: 1
+    m_Value: {x: 800, y: 450}
+  downSampling:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _rainMask_grayscale:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  pixelization:
+    m_OverrideState: 1
+    m_Value: 0
+  pixResolution:
+    m_OverrideState: 1
+    m_Value: 128
+  wipeEffect:
+    m_OverrideState: 1
+    m_Value: 0
+  foggingSpeed:
+    m_OverrideState: 1
+    m_Value: 0.98
+  calcTimeStep:
+    m_OverrideState: 1
+    m_Value: 0.1
+  useWind:
+    m_OverrideState: 1
+    m_Value: 0
+  radialWind:
+    m_OverrideState: 1
+    m_Value: 0
+  windTurbulence:
+    m_OverrideState: 1
+    m_Value: 0.1
+  windTurbScale:
+    m_OverrideState: 1
+    m_Value: 1
+  wind:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  gravity:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: -9.8}
+  friction:
+    m_OverrideState: 1
+    m_Value: 0.8
+  generateTrail:
+    m_OverrideState: 1
+    m_Value: 1
+  maxStaticRaindropNumber:
+    m_OverrideState: 1
+    m_Value: 5000
+  maxDynamicRaindropNumber:
+    m_OverrideState: 1
+    m_Value: 10
+  raindropSizeRange:
+    m_OverrideState: 1
+    m_Value: {x: 0.1, y: 0.25}
+  tintColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  tintWeight:
+    m_OverrideState: 1
+    m_Value: 1
+  fusion:
+    m_OverrideState: 1
+    m_Value: 1
+  distortion:
+    m_OverrideState: 1
+    m_Value: 0.6
+  _inBlack:
+    m_OverrideState: 1
+    m_Value: 55
+  _inWhite:
+    m_OverrideState: 1
+    m_Value: 180
+  _outWhite:
+    m_OverrideState: 1
+    m_Value: 160
+  _outBlack:
+    m_OverrideState: 1
+    m_Value: 5
+  useFog:
+    m_OverrideState: 1
+    m_Value: 0
+  fogTint:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  fogIntensity:
+    m_OverrideState: 1
+    m_Value: 0.5
+  fogIteration:
+    m_OverrideState: 1
+    m_Value: 2
+  dropletBlur:
+    m_OverrideState: 1
+    m_Value: 0
+  _focalize:
+    m_OverrideState: 1
+    m_Value: 1
+  blurIteration:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &9009573091818496265
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e021b4c809a781e468c2988c016ebbea, type: 3}
+  m_Name: ColorLookup
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  texture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  contribution:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
