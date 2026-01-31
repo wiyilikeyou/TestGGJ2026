@@ -49,6 +49,7 @@ public class RoadCreator : MonoBehaviour
         Vector3.back, Vector3.left, Vector3.forward,Vector3.right,
     };
 
+    private ENextDir? changeDirSignal = null;
     void OnEnable()
     {
         OnChangeWorldDir.Register(ChangeWorldDirHandler);
@@ -59,7 +60,8 @@ public class RoadCreator : MonoBehaviour
         OnChangeWorldDir.Deregister(ChangeWorldDirHandler);
     }
 
-    private void ChangeWorldDirHandler(ENextDir nextDir)
+    private void SetChangeDirSignal(ENextDir nextDir) => changeDirSignal = nextDir;
+    private void ChangeWorldDirHandler(ENextDir nextDir,Vector3 pos)
     {
         switch (nextDir)
         {
@@ -67,9 +69,11 @@ public class RoadCreator : MonoBehaviour
                 break;
             case ENextDir.Right:
                 ToRight();
+                OnRotatePlayerHub.Invoke(currentDir,pos);
                 break;
             case ENextDir.Left:
                 ToLeft();
+                OnRotatePlayerHub.Invoke(currentDir,pos);
                 break;
         }
     }
