@@ -164,17 +164,17 @@ PrefabInstance:
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.731474
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.219895
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.329855
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
@@ -211,6 +211,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001755083499471930, guid: f3cbd91155cdf4a43bf8b8e34dced237,
+        type: 3}
+      propertyPath: roadConfigs.Array.data[0].roadLength
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001755083499471930, guid: f3cbd91155cdf4a43bf8b8e34dced237,
+        type: 3}
+      propertyPath: roadConfigs.Array.data[0].roadPrefab
+      value: 
+      objectReference: {fileID: 3183895052158185436, guid: e61bf37a928db83478cc03eaaed829c5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cbd91155cdf4a43bf8b8e34dced237, type: 3}
 --- !u!4 &7656562570216694408 stripped

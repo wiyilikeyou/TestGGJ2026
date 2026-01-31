@@ -51,13 +51,12 @@ public class Laser : MonoBehaviour
             laserBox.transform.DOScale(Vector3.zero, 0.1f);
          });
          laserTips.SetActive(false);
-       
       }
       else if(Time.time - summonTimer < 2)
       {
          
          laserTips.transform.localScale = new Vector3( isCircle ? (Time.time - summonTimer)/2f : laserTips.transform.localPosition.x, laserTips.transform.localPosition.y,  (Time.time - summonTimer)/2f);
-         material.SetColor("_MainColor", new Color(1, 0, 0, (Time.time - summonTimer) / 2.8f));
+         material.SetColor("_MainColor", new Color(1, 0, 0, (Time.time - summonTimer) / 2f));
       }else if (Time.time - summonTimer < 2.33f)
       {
          material.SetColor("_MainColor", new Color(1, ((Time.time - summonTimer) -2)*2.2f, ((Time.time - summonTimer) -2)*2.2f, 1));
