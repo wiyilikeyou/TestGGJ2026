@@ -14,6 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: NewKoreographyTrack
   mEventList:
+  - mStartSample: 3840
+    mEndSample: 3840
+  - mStartSample: 7680
+    mEndSample: 7680
+  - mStartSample: 9600
+    mEndSample: 9600
+  - mStartSample: 12480
+    mEndSample: 12480
   - mStartSample: 30000
     mEndSample: 30000
   - mStartSample: 50000
