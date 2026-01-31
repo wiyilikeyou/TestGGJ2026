@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: NewKoreography
   m_EditorClassIdentifier: 
-  mSourceClip: {fileID: 8300000, guid: 502608c992c5d2b498af0d23e3c72945, type: 3}
+  mSourceClip: {fileID: 8300000, guid: 7bd9ece4523aa3441b6eb08bd986ec9e, type: 3}
   mAudioFilePath: 
   mSampleRate: 48000
   mIgnoreLatencyOffset: 0
   mTempoSections:
   - sectionName: New Section
     startSample: 0
-    samplesPerBeat: 1000
+    samplesPerBeat: 960
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   mTracks:
