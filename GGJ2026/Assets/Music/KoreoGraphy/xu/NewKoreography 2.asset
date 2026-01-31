@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: NewKoreography 2
+  m_EditorClassIdentifier: 
+  mSourceClip: {fileID: 8300000, guid: 07c875c9d85a36f48bd4f5212c8e6074, type: 3}
+  mAudioFilePath: 
+  mSampleRate: 48000
+  mIgnoreLatencyOffset: 0
+  mTempoSections:
+  - sectionName: New Section
+    startSample: 0
+    samplesPerBeat: 576
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  mTracks:
+  - {fileID: 11400000, guid: 4b64d14975b61c24fad30e33efb6caca, type: 2}
+  - {fileID: 11400000, guid: 245728e8c367baf448c0a53a74607107, type: 2}
