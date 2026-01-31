@@ -19,6 +19,7 @@ public class UFOController : MonoBehaviour
     private float activeTime = -1f;
     public bool IsActive => isActive;
     private bool changedColor = false;
+    
     private void Start()
     {
         if(light)
@@ -58,7 +59,7 @@ public class UFOController : MonoBehaviour
             });
     }
     
-    public void RestoreColor()
+    private void RestoreColor()
     {
         if(!light)return;
         light.DOColor(initialColor, 1);
@@ -72,5 +73,10 @@ public class UFOController : MonoBehaviour
             {
                 Destroy(gameObject,2);
             });
+    }
+
+    private void SummonAlian()
+    {
+        
     }
 }

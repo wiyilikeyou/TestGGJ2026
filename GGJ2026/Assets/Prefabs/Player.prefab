@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1500
-  interactRadius: 5
+  interactRadius: 0.5
   interactLayer:
     serializedVersion: 2
     m_Bits: 256
