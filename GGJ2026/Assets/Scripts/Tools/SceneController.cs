@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : Singleton<SceneController>
 {
-    public bool showVedio = false;
+    public bool showVideo = false;
     public Animator Interval;
     protected override void Awake()
     {
@@ -24,7 +24,7 @@ public class SceneController : Singleton<SceneController>
     {
         var operation = SceneManager.LoadSceneAsync(index);
         operation.allowSceneActivation = false;
-        Interval.gameObject.SetActive(index > 1);
+        // Interval.gameObject.SetActive(index > 1);
         while (!operation.isDone)
         {
             if (operation.progress >= 0.9f) break;
