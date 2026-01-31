@@ -24,7 +24,8 @@ public class UFOController : MonoBehaviour
     private float activeTime = -1f;
     public bool IsActive => isActive;
     private bool changedColor = false;
-    
+    private float summonTime = -1f;
+    public Vector3 speed;
     private void Start()
     {
         if(light)
@@ -33,15 +34,21 @@ public class UFOController : MonoBehaviour
             light.intensity = initialIntensity;
         }
         isActive = false;
+        summonTime = Time.time;
     }
 
     private void Update()
     {
+        transform.position += speed * Time.deltaTime;
         if(!isActive)return;
         if (Time.time - activeTime >= activeDuration)
         {
             isActive = false;
             RestoreColor();
+        }
+        if (Time.time - summonTime >= 10)
+        {
+            Destroy(gameObject);
         }
     }
     [Button]

@@ -24,9 +24,19 @@ public class PlayerController : MonoBehaviour
         playerInput.Player.Interact.performed += OnInteract;
     }
 
-    private void OnEnable() => playerInput.Enable();
-    private void OnDisable() => playerInput.Disable();
+    private void OnEnable()
+    { 
+        playerInput.Enable();
+        OnRotatePlayerHub.Register(ChangeDirHandler);
+    }
+    private void OnDisable()
+    {
+        playerInput.Disable();
+        OnRotatePlayerHub.Deregister(ChangeDirHandler);
+    }
 
+    private Dir currentDir = Dir.Forward;
+    private void ChangeDirHandler(Dir dir, Vector3 pos) => currentDir = dir;
     private void Update()
     {
         moveDirection = playerInput.Player.Move.ReadValue<Vector2>();
@@ -41,6 +51,11 @@ public class PlayerController : MonoBehaviour
     {
         if (rb == null) return;
         Vector3 forceDir = new Vector3(moveDirection.x, 0, moveDirection.y);
+
+        // 根据当前方向旋转力的方向
+        float angle = (int)currentDir * 90f;
+        forceDir = Quaternion.Euler(0, angle, 0) * forceDir;
+
         rb.AddForce(forceDir * moveSpeed, ForceMode.Force);
     }
     private Collider[] buffer = new Collider[10];
