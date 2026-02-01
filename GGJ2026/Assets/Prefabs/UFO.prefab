@@ -48,7 +48,7 @@ Light:
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 50
-  m_InnerSpotAngle: 21.80208
+  m_InnerSpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -333,10 +333,10 @@ MonoBehaviour:
   lights:
   - {fileID: 7658971777538424574}
   - {fileID: 5294860160653986755}
-  initialColor: {r: 0.5764706, g: 1, b: 0.6462162, a: 0.5019608}
-  initialIntensity: 2
-  targetColor: {r: 0.33635452, g: 1, b: 0.26100624, a: 1}
-  targetIntensity: 10
+  initialColor: {r: 0.5764706, g: 1, b: 0.6462162, a: 0.101960786}
+  initialIntensity: 1
+  targetColor: {r: 0.33635452, g: 1, b: 0.26100624, a: 0.4}
+  targetIntensity: 1.8
   fadeDuration: 2
   activeDuration: 1
   alianSummonPos: {fileID: 2881878767998329450}
