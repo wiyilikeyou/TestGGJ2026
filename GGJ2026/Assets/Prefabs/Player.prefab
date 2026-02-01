@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fe6ccc91cb7064b8c3c83b23b88073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1301129953563037016}
   moveSpeed: 1500
   interactRadius: 0.5
   interactLayer:
@@ -183,6 +184,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24a3e257271624846817993b79d0b826, type: 3}
+--- !u!95 &1301129953563037016 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3032699559669337047, guid: 24a3e257271624846817993b79d0b826,
+    type: 3}
+  m_PrefabInstance: {fileID: 4042221333724907151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1550421010255325038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3286758371515949537, guid: 24a3e257271624846817993b79d0b826,
