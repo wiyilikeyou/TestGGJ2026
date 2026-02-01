@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1269977836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269977837}
+  - component: {fileID: 1269977838}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1269977837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269977836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7656562569441051284}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269977838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269977836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92e827286aa15d4b9f343bdd3cb2322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  countDown: {fileID: 0}
+  gameOver: {fileID: 0}
+  scroll: {fileID: 0}
+  audioSource: {fileID: 0}
+  scoreFeedback: {fileID: 0}
+  background: {fileID: 0}
+  videoPlayer: {fileID: 0}
 --- !u!1 &7656562569441051285
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +84,7 @@ Transform:
   - {fileID: 7656562569761617847}
   - {fileID: 7656562568954258054}
   - {fileID: 7656562570216694408}
+  - {fileID: 1269977837}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,6 +292,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlianCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 5358608046175563138, guid: e0f9a7731c03cc54ea8c1dc9514be61c,
+        type: 3}
+      propertyPath: lurenPrefab
+      value: 
+      objectReference: {fileID: 7204412722979387246, guid: a6991f641806160488b2fd4ac595bdd6,
+        type: 3}
     - target: {fileID: 5358608046175563138, guid: e0f9a7731c03cc54ea8c1dc9514be61c,
         type: 3}
       propertyPath: bludAlianPrefab
