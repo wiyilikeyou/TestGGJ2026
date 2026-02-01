@@ -81,9 +81,11 @@ public class GameControl : Singleton<GameControl>
     public void GameRestart()
     {
         SceneManager.LoadScene(1);
-
     }
-    
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void QuitGame()
     {
         background.raycastTarget = true;
