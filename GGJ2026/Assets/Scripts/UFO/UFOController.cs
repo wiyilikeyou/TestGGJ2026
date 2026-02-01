@@ -27,7 +27,12 @@ public class UFOController : MonoBehaviour
     private bool changedColor = false;
     private float summonTime = -1f;
     public Vector3 speed;
-    
+
+    [Header("出场效果")]
+    [SerializeField] private float spawnHeight = 20f; // 生成高度
+    [SerializeField] private float descendDuration = 2f; // 下降时间
+    [SerializeField] private float spawnRadius = 10f; // 随机生成半径
+
     private List<GameObject> alians = new List<GameObject>();
     private void Start()
     {
@@ -41,6 +46,34 @@ public class UFOController : MonoBehaviour
         }
         isActive = false;
         summonTime = Time.time;
+
+        // 实现从天上飞下来的效果
+        SpawnFromSky();
+    }
+
+    private void SpawnFromSky()
+    {
+        Vector3 targetLocalScale = transform.localScale;
+        transform.localScale = Vector3.zero;
+        transform.DOScale(targetLocalScale, 1);
+        // 保存目标位置
+        Vector3 targetPosition = transform.position;
+
+        // 随机一个水平方向的偏移
+        Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * spawnRadius;
+
+        // 设置初始位置：在目标位置上方 + 随机水平偏移
+        Vector3 startPosition = targetPosition + new Vector3(randomOffset.x, spawnHeight, randomOffset.y) + Vector3.forward * 30;
+        transform.position = startPosition;
+
+        // 使用 DOTween 平滑下降到目标位置
+        transform.DOMove(targetPosition, descendDuration)
+            .SetEase(Ease.OutQuad) // 使用缓出效果，更自然
+            .OnComplete(() =>
+            {
+                // 下降完成后的回调（可选）
+                ChangeColor();
+            });
     }
 
     private void Update()

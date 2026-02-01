@@ -34,7 +34,7 @@ public class UFOCreator : Singleton<UFOCreator>
                 if(box.obj.TryGetComponent<UFOController>(out UFOController ufoController))
                 {
                     ufoController.speed = Vector3.back * 10;
-                    ufoController.ChangeColor();
+                    // ufoController.ChangeColor();
                 }
                 break;
             case EUFOType.EnemyUFO:

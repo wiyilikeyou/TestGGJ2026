@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         moveDirection = playerInput.Player.Move.ReadValue<Vector2>();
-        if(animator)animator.SetFloat("qindao", moveDirection.x);
+        if(animator)animator.SetFloat("qindao", rb.velocity.x);
     }
 
     private void FixedUpdate()

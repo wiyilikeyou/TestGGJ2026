@@ -81,7 +81,7 @@ public class MusicManager : MonoBehaviour
 
     private void OnTrackEvent_UFO(KoreographyEvent koreoEvent)
     {
-        UFOCreator.Instance?.SummonUFO(EUFOType.NormalUFO, Dir.Forward, summonPos.position + Vector3.right * Random.Range(-2f, 2f) + Vector3.up * 4.5f);
+        UFOCreator.Instance?.SummonUFO(EUFOType.NormalUFO, Dir.Forward, summonPos.position + Vector3.right * Random.Range(-1.5f, 1.5f) + Vector3.up * 4.5f);
     }
 
     private void OnTrackEvent_LaserLine(KoreographyEvent koreoEvent)
