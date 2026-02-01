@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         if (Time.time - huaChanTime > 1.75f)
         {
             animator?.SetTrigger("HuaChan");
-            rb.AddForce(Vector3.forward * 90, ForceMode.Impulse);
+            rb.AddForce(Vector3.forward * 150, ForceMode.Impulse);
             if (capsuleCollider)
             {
                 capsuleCollider.center = new Vector3(0, 1, 0);

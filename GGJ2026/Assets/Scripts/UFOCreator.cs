@@ -50,7 +50,7 @@ public class UFOCreator : Singleton<UFOCreator>
                 break;
             case EUFOType.LaserCircle:
                 box.obj = Instantiate(laserCircleUFOPrefab, pos , Quaternion.identity);
-                box.obj.transform.position = (FindObjectOfType<PlayerController>()?.transform.position??Vector3.zero) + MathUtils.GetRandomPosOffset(2.5f);
+                box.obj.transform.position = (FindObjectOfType<PlayerController>()?.transform.position??Vector3.zero) + MathUtils.GetRandomPosOffset(1f);
                 break;
             default:
                 box.obj = Instantiate(ufoPrefab, pos, Quaternion.identity);

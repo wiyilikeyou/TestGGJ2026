@@ -44,7 +44,7 @@ public class GameControl : Singleton<GameControl>
 
     public void UpdateScore(int points)
     {
-        score += points; 
+        score = Mathf.Max(0,score + points);
         if(points>0&&scoreFeedback) scoreFeedback.PlayFeedbacks();
         scoreText.text = score.ToString(); 
     }
