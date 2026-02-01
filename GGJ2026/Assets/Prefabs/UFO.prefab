@@ -435,7 +435,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.5251572, g: 1, b: 0.5278018, a: 0.8}
+  m_Color: {r: 0.5254902, g: 1, b: 0.8068947, a: 0.8}
   m_Intensity: 5
   m_Range: 7
   m_SpotAngle: 50
@@ -501,7 +501,7 @@ MonoBehaviour:
   pluginVersion: 20002
   colorFromLight: 1
   colorMode: 0
-  color: {r: 0.5251572, g: 1, b: 0.5278018, a: 0.8}
+  color: {r: 0.5254902, g: 1, b: 0.8068947, a: 0.8}
   colorGradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
