@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private PlayerMoveInput playerInput;
     private Rigidbody rb;
     private Vector2 moveDirection;
+    
+    public Animator animator;
 
     [Header("设置")]
     [SerializeField] private float moveSpeed = 50f;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         moveDirection = playerInput.Player.Move.ReadValue<Vector2>();
+        if(animator)animator.SetFloat("qindao", moveDirection.x);
     }
 
     private void FixedUpdate()

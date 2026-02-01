@@ -14,6 +14,9 @@ public class Laser : MonoBehaviour
    private bool isAttacked = false;
    private Material material;
    public Renderer rend;
+   
+   public Vector3 scale = new Vector3(15,1,1);
+   public bool isCircle = false;
    private void Start()
    {
       summonTimer = Time.time;
@@ -27,12 +30,12 @@ public class Laser : MonoBehaviour
    private void Update()
    {
       if(Time.time - summonTimer >= 5)Destroy(gameObject);
-      if(Time.time - summonTimer > 2 && !isAttacked)
+      if(Time.time - summonTimer > 2.33f && !isAttacked)
       {
          isAttacked = true;
          laserBox.SetActive(true);
          laserBox.transform.localScale = Vector3.zero;
-         laserBox.transform.DOScale(new Vector3(15,1,1), 0.25f).OnComplete(() =>
+         laserBox.transform.DOScale(scale, 0.25f).OnComplete(() =>
          {
             if (checkHitRadius.Check(out var list))
             {
@@ -48,12 +51,15 @@ public class Laser : MonoBehaviour
             laserBox.transform.DOScale(Vector3.zero, 0.1f);
          });
          laserTips.SetActive(false);
-       
       }
       else if(Time.time - summonTimer < 2)
       {
-         laserTips.transform.localPosition = new Vector3( laserTips.transform.localPosition.x, laserTips.transform.localPosition.y,  (Time.time - summonTimer)/2f);
-         material.SetColor("_MainColor", new Color(1, 0, 0, (Time.time - summonTimer) / 2.8f));
+         
+         laserTips.transform.localScale = new Vector3( isCircle ? (Time.time - summonTimer)/2f : laserTips.transform.localPosition.x, laserTips.transform.localPosition.y,  (Time.time - summonTimer)/2f);
+         material.SetColor("_MainColor", new Color(1, 0, 0, (Time.time - summonTimer) / 2f));
+      }else if (Time.time - summonTimer < 2.33f)
+      {
+         material.SetColor("_MainColor", new Color(1, ((Time.time - summonTimer) -2)*2.2f, ((Time.time - summonTimer) -2)*2.2f, 1));
       }
    }
 }

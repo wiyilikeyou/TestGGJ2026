@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7656562569441051284}
+  - component: {fileID: 123573732}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -34,6 +35,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123573732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656562569441051285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0bfb52010c1ac640840d14b36890284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackName: shache2
+  trackName1: shache1
+  beatCount: {fileID: 0}
+  EnemyPrefab: {fileID: 8835542764578687725, guid: 12edf7bf7e10e1545bd2e533480f3e38,
+    type: 3}
+  EnemyPrefab2: {fileID: 442972973897044233, guid: f068be3755d94ab46b210c79d3720d45,
+    type: 3}
+  musicPlayer: {fileID: 0}
+  road: {fileID: 0}
+  summonPos: {fileID: 0}
 --- !u!1001 &1018010816737751474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,6 +125,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8946965254852945645, guid: 15756aff459960c44a223dcb25282c56,
         type: 3}
+    - target: {fileID: 7233098103255582214, guid: 6d66ea259a936844194cf1c6f9fb68cb,
+        type: 3}
+      propertyPath: laserCircleUFOPrefab
+      value: 
+      objectReference: {fileID: 7642490864162514554, guid: bdd66e9f9c762c547a2083533c16c9f7,
+        type: 3}
     - target: {fileID: 7233098103255582215, guid: 6d66ea259a936844194cf1c6f9fb68cb,
         type: 3}
       propertyPath: m_Name
@@ -135,17 +164,17 @@ PrefabInstance:
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.731474
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.219895
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.329855
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001755083499471929, guid: f3cbd91155cdf4a43bf8b8e34dced237,
         type: 3}
@@ -182,6 +211,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001755083499471930, guid: f3cbd91155cdf4a43bf8b8e34dced237,
+        type: 3}
+      propertyPath: roadConfigs.Array.data[0].roadLength
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001755083499471930, guid: f3cbd91155cdf4a43bf8b8e34dced237,
+        type: 3}
+      propertyPath: roadConfigs.Array.data[0].roadPrefab
+      value: 
+      objectReference: {fileID: 3183895052158185436, guid: e61bf37a928db83478cc03eaaed829c5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cbd91155cdf4a43bf8b8e34dced237, type: 3}
 --- !u!4 &7656562570216694408 stripped

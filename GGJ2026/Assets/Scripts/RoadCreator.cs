@@ -90,7 +90,7 @@ public class RoadCreator : MonoBehaviour
         float moveDistance = speed * Time.deltaTime;
         foreach(var item in roadQueue)  
             item.roadPrefab.transform.position += GetRoadDir(currentDir) * moveDistance;
-        FillRoad(4);
+        FillRoad(2);
         var roadBox = roadQueue[0];
         roadBox.travelDistance += moveDistance;
         if(roadBox.travelDistance >= roadBox.roadLength)

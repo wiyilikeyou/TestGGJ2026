@@ -21,6 +21,9 @@ public class MusicTest : MonoBehaviour
     private int beat = 0;
     private GameObject player;
     public GameObject road;
+    
+    public Transform summonPos;
+    
 
     void Start()
     {
@@ -54,9 +57,7 @@ public class MusicTest : MonoBehaviour
             spawnPosition.z = player.transform.position.z + 30f;
         
             // 在指定位置生成 EnemyPrefab
-            GameObject enemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
-            
-            enemy.transform.SetParent(road.transform);
+            UFOCreator.Instance?.SummonUFO(EUFOType.NormalUFO, Dir.Forward, summonPos.position + Vector3.right * Random.Range(-2f, 2f) + Vector3.up * 5.75f);
         }
         else
         {
@@ -78,9 +79,7 @@ public class MusicTest : MonoBehaviour
             spawnPosition.z = player.transform.position.z + 30f;
         
             // 在指定位置生成 EnemyPrefab
-            GameObject enemy = Instantiate(EnemyPrefab2, spawnPosition, Quaternion.identity);
-            
-            enemy.transform.SetParent(road.transform);
+            UFOCreator.Instance?.SummonUFO((EUFOType)UnityEngine.Random.Range(1,4), Dir.Forward, summonPos.position + Vector3.right * Random.Range(-2f, 2f) + Vector3.up * 5.75f);
         }
         else
         {
