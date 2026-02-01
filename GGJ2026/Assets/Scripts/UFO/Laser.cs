@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Ib_Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -31,10 +33,30 @@ public class Laser : MonoBehaviour
          0
       );
    }
-   
+   private float? attackTime = -1;
    private void Update()
    {
       if(Time.time - summonTimer >= 5)Destroy(gameObject);
+      if (attackTime != null && Time.time - attackTime.Value <= 1f)
+      {
+         if (checkHitRadius.Check(out var list))
+         {
+            for (int i = 0; i < list.Count; i++)
+            {
+               if(list[i].transform.CompareTag("Player"))
+               {
+                  ShowTestUIInfo.Invoke("Hurt!");
+                  if (list[i].TryGetComponent(out Rigidbody rb))
+                  {
+                     rb.AddForce(Vector3.up * 250, ForceMode.Impulse);
+                  }
+                  GameControl.Instance?.UpdateScore(-1000);
+                  attackTime = null;
+                  break;
+               }
+            }
+         }
+      }
       if(Time.time - summonTimer > 2.33f && !isAttacked)
       {
          isAttacked = true;
@@ -42,23 +64,9 @@ public class Laser : MonoBehaviour
          laserBox.transform.localScale = Vector3.zero;
          laserBox.transform.DOScale(scale, 0.25f).OnComplete(() =>
          {
-            if (checkHitRadius.Check(out var list))
-            {
-               for (int i = 0; i < list.Count; i++)
-               {
-                  if(list[i].transform.CompareTag("Player"))
-                  {
-                     ShowTestUIInfo.Invoke("Hurt!");
-                     if (list[i].TryGetComponent(out Rigidbody rb))
-                     {
-                        rb.AddForce(Vector3.up * 250, ForceMode.Impulse);
-                     }
-                     GameControl.Instance?.UpdateScore(-1000);
-                     break;
-                  }
-               }
-            }
-            laserBox.transform.DOScale(Vector3.zero, 0.1f);
+            attackTime = Time.time;
+           
+            Ib_Async.DelayDoSomething(1, () => laserBox.transform.DOScale(Vector3.zero, 0.1f),this.GetCancellationTokenOnDestroy());
          });
          laserTips.SetActive(false);
       }
