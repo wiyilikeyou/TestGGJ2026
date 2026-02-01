@@ -40,6 +40,11 @@ public class GameControl : Singleton<GameControl>
                 scroll.GetComponent<Image>().fillAmount = progress;
             }
         }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameExit();
+        }
     }
 
     public void UpdateScore(int points)
@@ -100,10 +105,18 @@ public class GameControl : Singleton<GameControl>
         yield return new WaitForSeconds(1f);
         videoPlayer.gameObject.SetActive(true);
         background.DOFade(0, 1f).SetEase(Ease.InOutQuad);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         background.DOFade(1, 1f).SetEase(Ease.InOutQuad);
         yield return new WaitForSeconds(1f);
-        SceneController.Instance.TransitionTo(1);
+        SceneController.Instance.TransitionTo(0);
     }
 
+    public void GameExit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }

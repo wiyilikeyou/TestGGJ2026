@@ -12,14 +12,14 @@ public class GameUIPanel : MonoBehaviour
     {
         if (restartBtn && GameControl.Instance)
         {
-            restartBtn.onClick.AddListener(GameControl.Instance.GameRestart);
+            // restartBtn.onClick.AddListener(GameControl.Instance.GameRestart);
             AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[5],0,1);
 
         }
 
         if (menuBtn && GameControl.Instance)
         {
-            menuBtn.onClick.AddListener(GameControl.Instance.Menu);
+            // menuBtn.onClick.AddListener(GameControl.Instance.Menu);
             AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[5],0,1);
         }
     }
