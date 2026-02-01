@@ -60,6 +60,7 @@ public class Laser : MonoBehaviour
       if(Time.time - summonTimer > 2.33f && !isAttacked)
       {
          isAttacked = true;
+         AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[7],0,1);
          laserBox.SetActive(true);
          laserBox.transform.localScale = Vector3.zero;
          laserBox.transform.DOScale(scale, 0.25f).OnComplete(() =>

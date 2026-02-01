@@ -46,7 +46,7 @@ public class GameControl : Singleton<GameControl>
     {
         score = Mathf.Max(0,score + points);
         if(points>0&&scoreFeedback) scoreFeedback.PlayFeedbacks();
-        scoreText.text = score.ToString(); 
+        if(scoreText)scoreText.text = score.ToString(); 
     }
     
     private IEnumerator CountdownCoroutine()
@@ -75,6 +75,8 @@ public class GameControl : Singleton<GameControl>
     {
         gameOver.SetActive(true);
         gameOver.transform.Find("Score").GetComponent<Text>().text = score.ToString();
+        AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[6],0,1);
+
         // Time.timeScale = 0f;
     }
 

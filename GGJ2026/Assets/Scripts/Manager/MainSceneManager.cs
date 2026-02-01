@@ -12,6 +12,7 @@ public class MainSceneManager : MonoBehaviour
     public void GameStart()
     {
         background.raycastTarget = true;
+        AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[5],0,1);
         StartCoroutine(FadeBackgroundAndPlayVideo());
     }
 

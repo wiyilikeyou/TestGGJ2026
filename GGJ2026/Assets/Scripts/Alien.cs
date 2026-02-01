@@ -31,6 +31,7 @@ public class Alien : MonoBehaviour
             Vector3 randomDirection = new Vector3(Random.Range(-0.5f, 0.5f), 0, -1f).normalized;
             Vector3 backwardForce = -randomDirection * forceMagnitude;
             rb.AddForce(backwardForce, ForceMode.Impulse);
+            AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[4],0,1);
 
             if (GameControl.Instance)
             {

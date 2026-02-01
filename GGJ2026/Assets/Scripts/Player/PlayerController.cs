@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
         {
             animator?.SetTrigger("HuaChan");
             rb.AddForce(Vector3.forward * 150, ForceMode.Impulse);
+            // AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[3],0,1);
+
             if (capsuleCollider)
             {
                 capsuleCollider.center = new Vector3(0, 1, 0);

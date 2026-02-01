@@ -66,6 +66,7 @@ public class UFOController : MonoBehaviour
         Vector3 startPosition = targetPosition + new Vector3(randomOffset.x, spawnHeight, randomOffset.y) + Vector3.forward * 30;
         transform.position = startPosition;
 
+        AudioManager.Instance?.PlayOneShot(AudioManager.Instance.audioClips[1],0,1);
         // 使用 DOTween 平滑下降到目标位置
         transform.DOMove(targetPosition, descendDuration)
             .SetEase(Ease.OutQuad) // 使用缓出效果，更自然
