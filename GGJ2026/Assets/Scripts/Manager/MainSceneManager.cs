@@ -1,50 +1,30 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Sirenix.OdinInspector;
+using DG.Tweening;
+using UnityEngine.Video;
 
 public class MainSceneManager : MonoBehaviour
 {
-    public Sprite GameContinue;
-    public Button GameStartButton;
-    [Button]
-    public void SetLevel9()
-    {
-        PlayerPrefs.SetInt("Level", 11111);
-    }
-    private void Start() {
-        AudioManager.Instance.PlayLoop(AudioManager.Instance.audioClips[0]);
-        if(PlayerPrefs.HasKey("Level") == false||PlayerPrefs.GetInt("Level") == 1){
-            PlayerPrefs.SetInt("Level", 1);
-        }
-        else{
-            GameStartButton.GetComponent<Image>().sprite = GameContinue;
-            //GameStartText.text = "继续游戏";
-        }
-    }
-
-    public void LevelChoose()
-    {
-        SceneController.Instance.TransitionTo(1);
-    }
+    public Image background; 
+    public VideoPlayer videoPlayer;
 
     public void GameStart()
     {
-        int level = PlayerPrefs.GetInt("Level");
-        if (level == 1)
-        {
-            SceneController.Instance.TransitionTo(1);
-            return;
-        }
-        SceneController.Instance.TransitionTo(level + 1);
+        background.raycastTarget = true;
+        StartCoroutine(FadeBackgroundAndPlayVideo());
     }
 
-    public void LevelReset()
+    private IEnumerator FadeBackgroundAndPlayVideo()
     {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
-        PlayerPrefs.SetInt("Level", 1);
+        background.DOFade(1, 1f).SetEase(Ease.InOutQuad);
+        yield return new WaitForSeconds(1f);
+        videoPlayer.gameObject.SetActive(true);
+        background.DOFade(0, 1f).SetEase(Ease.InOutQuad);
+        yield return new WaitForSeconds(13f);
+        background.DOFade(1, 1f).SetEase(Ease.InOutQuad);
+        yield return new WaitForSeconds(1f);
+        SceneController.Instance.TransitionTo(1);
     }
 
     public void GameExit()
@@ -52,7 +32,7 @@ public class MainSceneManager : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
     }
 }
