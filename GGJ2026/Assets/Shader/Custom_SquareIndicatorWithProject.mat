@@ -32,6 +32,6 @@ Material:
     - _ProjectOffset: 0.01
     - _ProjectScale: 1.2
     m_Colors:
-    - _MainColor: {r: 1, g: 0.010011354, b: 0, a: 0.1882353}
+    - _MainColor: {r: 1, g: 0.24411, b: 0.2358489, a: 0.1882353}
     - _ProjectColor: {r: 0, g: 0, b: 0, a: 0.3}
   m_BuildTextureStacks: []

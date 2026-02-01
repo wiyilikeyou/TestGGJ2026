@@ -155,7 +155,14 @@ public class UFOController : MonoBehaviour
     private void SummonAlian()
     {
         var obj = AlianCreator.Instance?.SummonAlian(EAlianSummonType.Test,UnityEngine.Random.Range(1,3),alianSummonPos.position,Quaternion.identity,alianSummonRadius,alianSummonPos);
-        if(obj != null)alians.Add(obj);
+        if (obj != null)
+        {
+            obj.transform.localPosition += Vector3.up * 4;
+            obj.transform.localScale = new Vector3(0,1,0);
+            obj.transform.DOLocalMoveY(obj.transform.localPosition.y -4, 0.25f).SetEase(Ease.OutQuad);
+            obj.transform.DOScale(Vector3.one , 0.25f).SetEase(Ease.OutQuad);
+            alians.Add(obj);
+        }
     }
     
     bool leaving = false;

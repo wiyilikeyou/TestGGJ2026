@@ -69,10 +69,10 @@ public class Laser : MonoBehaviour
             laserTips.transform.localScale.y,
             scaleValue
          );
-         material.SetColor("_MainColor", new Color(1, 0, 0, scaleValue));
+         material.SetColor("_MainColor", new Color(1f, 0.2f, 0.2f, scaleValue));
       }else if (Time.time - summonTimer < 2.33f)
       {
-         material.SetColor("_MainColor", new Color(1, ((Time.time - summonTimer) -2)*2.2f, ((Time.time - summonTimer) -2)*2.2f, 1));
+         material.SetColor("_MainColor", new Color(1f, 0.2f + ((Time.time - summonTimer) -2)*2.2f, 0.2f + ((Time.time - summonTimer) -2)*2.2f, 1));
       }
    }
 }
