@@ -257,7 +257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3873117597960252824}
   m_LocalRotation: {x: 0.087072834, y: -0.04345342, z: 0.0038016832, w: 0.9952466}
-  m_LocalPosition: {x: 0, y: 0, z: 35}
+  m_LocalPosition: {x: 0, y: 0, z: 32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -274,7 +274,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3873117598270954886}
   - component: {fileID: 3873117598270954881}
-  - component: {fileID: 3873117598270954880}
   m_Layer: 0
   m_Name: PlayerHub
   m_TagString: RotateCheck
@@ -315,19 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHub: {fileID: 3873117598270954886}
---- !u!65 &3873117598270954880
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3873117598270954887}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 10, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3873117598875631222
 GameObject:
   m_ObjectHideFlags: 0
