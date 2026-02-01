@@ -44,8 +44,8 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.33333337, g: 1, b: 0.70931596, a: 1}
+  m_Intensity: 25
   m_Range: 10
   m_SpotAngle: 50
   m_InnerSpotAngle: 50
@@ -332,11 +332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lights:
   - {fileID: 7658971777538424574}
-  - {fileID: 5294860160653986755}
-  initialColor: {r: 0.5764706, g: 1, b: 0.6462162, a: 0.101960786}
+  initialColor: {r: 0.5764706, g: 1, b: 0.8928328, a: 0.101960786}
   initialIntensity: 1
-  targetColor: {r: 0.33635452, g: 1, b: 0.26100624, a: 0.4}
-  targetIntensity: 1.8
+  targetColor: {r: 0.26274514, g: 1, b: 0.8135615, a: 0.4}
+  targetIntensity: 1.5
   fadeDuration: 2
   activeDuration: 1
   alianSummonPos: {fileID: 2881878767998329450}
