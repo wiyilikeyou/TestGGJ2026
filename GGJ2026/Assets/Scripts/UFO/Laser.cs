@@ -25,6 +25,11 @@ public class Laser : MonoBehaviour
       {
          material = rend.material;
       }
+      if(laserTips) laserTips.transform.localScale = new Vector3(
+         isCircle ? 0 : laserTips.transform.localScale.x,
+         laserTips.transform.localScale.y,
+         0
+      );
    }
    
    private void Update()
@@ -54,9 +59,13 @@ public class Laser : MonoBehaviour
       }
       else if(Time.time - summonTimer < 2)
       {
-         
-         laserTips.transform.localScale = new Vector3( isCircle ? (Time.time - summonTimer)/2f : laserTips.transform.localPosition.x, laserTips.transform.localPosition.y,  (Time.time - summonTimer)/2f);
-         material.SetColor("_MainColor", new Color(1, 0, 0, (Time.time - summonTimer) / 2f));
+         float scaleValue = (Time.time - summonTimer) / 2f;
+         laserTips.transform.localScale = new Vector3(
+            isCircle ? scaleValue : laserTips.transform.localScale.x,
+            laserTips.transform.localScale.y,
+            scaleValue
+         );
+         material.SetColor("_MainColor", new Color(1, 0, 0, scaleValue));
       }else if (Time.time - summonTimer < 2.33f)
       {
          material.SetColor("_MainColor", new Color(1, ((Time.time - summonTimer) -2)*2.2f, ((Time.time - summonTimer) -2)*2.2f, 1));

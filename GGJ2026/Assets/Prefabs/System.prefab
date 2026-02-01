@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7656562569441051284}
-  - component: {fileID: 123573732}
+  - component: {fileID: 1366917211}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &123573732
+--- !u!114 &1366917211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,18 +44,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7656562569441051285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0bfb52010c1ac640840d14b36890284, type: 3}
+  m_Script: {fileID: 11500000, guid: fb7a905b4e6ddfb4e8c19260fa4ad28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackName: shache2
-  trackName1: shache1
-  beatCount: {fileID: 0}
-  EnemyPrefab: {fileID: 8835542764578687725, guid: 12edf7bf7e10e1545bd2e533480f3e38,
-    type: 3}
-  EnemyPrefab2: {fileID: 442972973897044233, guid: f068be3755d94ab46b210c79d3720d45,
-    type: 3}
+  trackEventBoxes:
+  - trackName: shache2
+    eventType: 0
+  - trackName: shache1
+    eventType: 2
   musicPlayer: {fileID: 0}
-  road: {fileID: 0}
   summonPos: {fileID: 0}
 --- !u!1001 &1018010816737751474
 PrefabInstance:

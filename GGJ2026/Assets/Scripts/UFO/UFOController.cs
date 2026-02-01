@@ -57,14 +57,16 @@ public class UFOController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    List<Tween> tweens = new List<Tween>();
     [Button]
     public void ChangeColor()
     {
         if(changedColor)return;
         changedColor = true;
         bool init = false;
+        
         foreach (var light in lights)
-        {
+        {       
             light.DOColor(targetColor, fadeDuration);
             DOTween.To(() => light.intensity, x => light.intensity = x, targetIntensity, fadeDuration)
                 .SetEase(Ease.Linear) // 【关键】设置为线性匀速
@@ -92,8 +94,9 @@ public class UFOController : MonoBehaviour
         bool init = false;
         foreach (var light in lights)
         {
-            light.DOColor(initialColor, 1);
-            DOTween.To(() => light.intensity, x => light.intensity = x, initialIntensity, 1)
+            var color = new Color(initialColor.r, initialColor.g, initialColor.b,0);
+            light.DOColor(color, 0.5f);
+            DOTween.To(() => light.intensity, x => light.intensity = x, 0, 1)
                 .SetEase(Ease.Linear) // 【关键】设置为线性匀速
                 .OnUpdate(() =>
                 {
@@ -103,6 +106,11 @@ public class UFOController : MonoBehaviour
                 {
                     if(!init)
                     {
+                        for (int i = 0; i < alians.Count; i++)
+                        {
+                            Destroy(alians[i].gameObject);
+                        }
+                        alians.Clear();
                         Destroy(gameObject,2);
                         init = true;
                     }
@@ -127,6 +135,7 @@ public class UFOController : MonoBehaviour
             rb.AddForce(new Vector3(UnityEngine.Random.Range(-5f,5f),UnityEngine.Random.Range(3,5f),UnityEngine.Random.Range(-5f,5f)) * 5,ForceMode.Impulse);
             Destroy(alians[i].gameObject,5);
         }
+        alians.Clear();
         RestoreColor();
         return true;
     }
