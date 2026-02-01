@@ -31,6 +31,11 @@ public class Alien : MonoBehaviour
             Vector3 randomDirection = new Vector3(Random.Range(-0.5f, 0.5f), 0, -1f).normalized;
             Vector3 backwardForce = -randomDirection * forceMagnitude;
             rb.AddForce(backwardForce, ForceMode.Impulse);
+
+            if (GameControl.Instance)
+            {
+                GameControl.Instance.UpdateScore(1000);
+            }
             
             if (AlianCreator.Instance)
             {
