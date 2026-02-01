@@ -333,9 +333,9 @@ MonoBehaviour:
   lights:
   - {fileID: 7658971777538424574}
   initialColor: {r: 0.5764706, g: 1, b: 0.8928328, a: 0.101960786}
-  initialIntensity: 1
+  initialIntensity: 0.5
   targetColor: {r: 0.26274514, g: 1, b: 0.8135615, a: 0.4}
-  targetIntensity: 1.5
+  targetIntensity: 1
   fadeDuration: 2
   activeDuration: 1
   alianSummonPos: {fileID: 2881878767998329450}
@@ -436,7 +436,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.5254902, g: 1, b: 0.8068947, a: 0.8}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 7
   m_SpotAngle: 50
   m_InnerSpotAngle: 21.80208
@@ -533,8 +533,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   intensityFromLight: 1
   intensityModeAdvanced: 0
-  intensityInside: 5
-  intensityOutside: 5
+  intensityInside: 1
+  intensityOutside: 1
   intensityMultiplier: 1
   hdrpExposureWeight: 0
   blendingMode: 0
