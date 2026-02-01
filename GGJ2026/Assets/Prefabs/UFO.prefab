@@ -333,9 +333,9 @@ MonoBehaviour:
   lights:
   - {fileID: 7658971777538424574}
   - {fileID: 5294860160653986755}
-  initialColor: {r: 0.57547164, g: 0.58546054, b: 1, a: 0.5019608}
+  initialColor: {r: 0.5764706, g: 1, b: 0.6462162, a: 0.5019608}
   initialIntensity: 2
-  targetColor: {r: 0, g: 0.023529414, b: 1, a: 1}
+  targetColor: {r: 0.33635452, g: 1, b: 0.26100624, a: 1}
   targetIntensity: 10
   fadeDuration: 2
   activeDuration: 1
@@ -343,6 +343,9 @@ MonoBehaviour:
   alianSummonCnt: 3
   alianSummonRadius: 1.2
   speed: {x: 0, y: 0, z: 0}
+  spawnHeight: 20
+  descendDuration: 2
+  spawnRadius: 10
 --- !u!136 &442972973897044236
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -433,7 +436,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.13941944, g: 0.11764705, b: 1, a: 0.8}
+  m_Color: {r: 0.5251572, g: 1, b: 0.5278018, a: 0.8}
   m_Intensity: 5
   m_Range: 7
   m_SpotAngle: 50
@@ -499,7 +502,7 @@ MonoBehaviour:
   pluginVersion: 20002
   colorFromLight: 1
   colorMode: 0
-  color: {r: 0.13941944, g: 0.11764705, b: 1, a: 0.8}
+  color: {r: 0.5251572, g: 1, b: 0.5278018, a: 0.8}
   colorGradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
