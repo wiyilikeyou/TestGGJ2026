@@ -11,6 +11,7 @@ public enum EAlianSummonType
 public class AlianCreator : Singleton<AlianCreator>
 {
     [BoxGroup("外星人")] [SerializeField] private GameObject testAlianPrefab;
+    [BoxGroup("撞击特效")] [SerializeField] public List<GameObject> effectPrefabs;
 
     public GameObject SummonAlian(EAlianSummonType alianSummonType,int cnt,Vector3 position,Quaternion rotation,float maxRadius,Transform parent)
     {
