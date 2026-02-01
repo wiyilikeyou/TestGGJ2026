@@ -49,6 +49,10 @@ public class Laser : MonoBehaviour
                   if(list[i].transform.CompareTag("Player"))
                   {
                      ShowTestUIInfo.Invoke("Hurt!");
+                     if (list[i].TryGetComponent(out Rigidbody rb))
+                     {
+                        rb.AddForce(Vector3.up * 250, ForceMode.Impulse);
+                     }
                      break;
                   }
                }

@@ -78,6 +78,7 @@ public class UFOController : MonoBehaviour
 
     private void Update()
     {
+        if(leaving)speed = new Vector3(speed.x*0.2f,3,speed.y*0.2f);
         transform.position += speed * Time.deltaTime;
         if(!isActive)return;
         if (Time.time - activeTime >= activeDuration)
@@ -156,7 +157,8 @@ public class UFOController : MonoBehaviour
         var obj = AlianCreator.Instance?.SummonAlian(EAlianSummonType.Test,UnityEngine.Random.Range(1,3),alianSummonPos.position,Quaternion.identity,alianSummonRadius,alianSummonPos);
         if(obj != null)alians.Add(obj);
     }
-
+    
+    bool leaving = false;
     public bool Interact()
     {
         if(!isActive || isInteracted)return false;
@@ -168,6 +170,8 @@ public class UFOController : MonoBehaviour
             rb.AddForce(new Vector3(UnityEngine.Random.Range(-5f,5f),UnityEngine.Random.Range(3,5f),UnityEngine.Random.Range(-5f,5f)) * 5,ForceMode.Impulse);
             Destroy(alians[i].gameObject,5);
         }
+        transform.DOMove(transform.position + Vector3.up * 10, 1.5f);
+        leaving = true;
         alians.Clear();
         RestoreColor();
         return true;
