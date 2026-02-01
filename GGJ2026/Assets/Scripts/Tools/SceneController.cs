@@ -16,7 +16,7 @@ public class SceneController : Singleton<SceneController>
     {
         if (index >= SceneManager.sceneCountInBuildSettings) index = 1;
         if(co != null)return;
-        Interval.gameObject.SetActive(false);
+        // Interval.gameObject.SetActive(false);
         co = StartCoroutine(Transition(index));
     }
 
