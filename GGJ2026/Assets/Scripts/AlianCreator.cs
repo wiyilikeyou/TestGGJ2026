@@ -11,6 +11,7 @@ public enum EAlianSummonType
 public class AlianCreator : Singleton<AlianCreator>
 {
     [BoxGroup("外星人")] [SerializeField] private GameObject testAlianPrefab;
+    [BoxGroup("外星人")] [SerializeField] private GameObject bludAlianPrefab;
     [BoxGroup("撞击特效")] [SerializeField] public List<GameObject> effectPrefabs;
 
     public GameObject SummonAlian(EAlianSummonType alianSummonType,int cnt,Vector3 position,Quaternion rotation,float maxRadius,Transform parent)
@@ -22,7 +23,14 @@ public class AlianCreator : Singleton<AlianCreator>
                 for (int i = 0; i < cnt; i++)
                 {
                     var targetPos = position + MathUtils.GetRandomPosOffset(maxRadius);
-                    return Instantiate(testAlianPrefab, targetPos, rotation,parent);
+                    if (bludAlianPrefab != null && UnityEngine.Random.Range(0, 2) == 0)
+                    {
+                        return Instantiate(bludAlianPrefab, targetPos, rotation,parent);
+                    }
+                    else
+                    {
+                        return Instantiate(testAlianPrefab, targetPos, rotation,parent);
+                    }
                 }
                 break;
         }

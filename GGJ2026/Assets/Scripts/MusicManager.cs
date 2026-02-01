@@ -66,7 +66,7 @@ public class MusicManager : MonoBehaviour
             Vector3 spawnPosition = player.transform.position;
         
             // 设置 x 坐标为 -3.5 到 3.5 之间的随机值
-            spawnPosition.x = Random.Range(-3.5f, 3.5f);
+            spawnPosition.x = Random.Range(-3.2f, 3.2f);
             spawnPosition.y = 5.75f;
             spawnPosition.z = player.transform.position.z + 30f;
         

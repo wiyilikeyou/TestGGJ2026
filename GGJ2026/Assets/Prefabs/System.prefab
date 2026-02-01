@@ -241,6 +241,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358608046175563138, guid: e0f9a7731c03cc54ea8c1dc9514be61c,
         type: 3}
+      propertyPath: bludAlianPrefab
+      value: 
+      objectReference: {fileID: 3834912221076578235, guid: 1330ea6825163a544acbc2ffc716fcb4,
+        type: 3}
+    - target: {fileID: 5358608046175563138, guid: e0f9a7731c03cc54ea8c1dc9514be61c,
+        type: 3}
       propertyPath: effectPrefabs.Array.size
       value: 23
       objectReference: {fileID: 0}
