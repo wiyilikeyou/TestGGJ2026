@@ -53,6 +53,7 @@ public class Laser : MonoBehaviour
                      {
                         rb.AddForce(Vector3.up * 250, ForceMode.Impulse);
                      }
+                     GameControl.Instance?.UpdateScore(-1000);
                      break;
                   }
                }
