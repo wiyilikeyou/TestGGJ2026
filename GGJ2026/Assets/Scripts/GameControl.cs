@@ -14,6 +14,7 @@ public class GameControl : Singleton<GameControl>
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI countDown;
     [SerializeField] private GameObject gameOver;
+    [SerializeField] private GameObject gameStop;
     [SerializeField] private GameObject scroll;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private MMFeedbacks scoreFeedback;
@@ -43,7 +44,7 @@ public class GameControl : Singleton<GameControl>
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameExit();
+            GameStop();
         }
     }
 
@@ -84,6 +85,21 @@ public class GameControl : Singleton<GameControl>
 
         // Time.timeScale = 0f;
     }
+    
+    public void GameStop()
+    {
+        if (gameStop.activeSelf)
+        {
+            gameStop.SetActive(false);
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            gameStop.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
 
     public void GameRestart()
     {
@@ -97,6 +113,11 @@ public class GameControl : Singleton<GameControl>
     {
         background.raycastTarget = true;
         StartCoroutine(FadeBackgroundAndPlayVideo());
+    }
+    
+    public void LeaveGame()
+    {
+        SceneController.Instance.TransitionTo(0);
     }
     
     private IEnumerator FadeBackgroundAndPlayVideo()

@@ -63,7 +63,7 @@ namespace MoreMountains.Tools
 
 				// draws a movable handle
 				var fmh_65_57_638478220619113409 = Quaternion.identity;
-				Vector3 newPoint = Handles.FreeMoveHandle(oldPoint, Quaternion.identity, HandleUtility.GetHandleSize(oldPoint) * 0.5f, Vector3.one * 0.25f, Handles.CircleHandleCap);
+				var fmh_66_57_639057100560875134 = Quaternion.identity; Vector3 newPoint = Handles.FreeMoveHandle(oldPoint, HandleUtility.GetHandleSize(oldPoint) * 0.5f, Vector3.one * 0.25f, Handles.CircleHandleCap);
 
 				// records changes
 				if (EditorGUI.EndChangeCheck())
